@@ -1,30 +1,28 @@
 import json
 import random
 
-options_list = []
-with open('country-by-capital-city.json') as f:
-	data = json.load(f)
-print(len(data))
-answer_pos = random.randint(0, len(data))
-country = data[answer_pos]['country']
-answer = data[answer_pos]['city']
 
-print(country)
-print(answer)
+def option_list():
+	options_list = []
 
-options_list.append(answer)
+	with open('country-by-capital-city.json') as f:
+		file = json.load(f)
 
-def find_capital(countryname):
-	return [d for d in data if d['country']==countryname][0]['city']
+	data = {}
 
-def mcq_options():
+	answer_pos = random.randint(0, len(file))
+
+	data['country'] = file[answer_pos]['country']
+	data['answer'] = file[answer_pos]['city']
+
+	options_list.append(data['answer'])
+
 	for i in range(3):
-		pos = random.randint(0, len(data))
-		options_list.append(data[pos]['city'])
+		pos = random.randint(0, len(file))
+		options_list.append(file[pos]['city'])
 
-mcq_options()
+	data['options'] = options_list
 
-
-random.shuffle(options_list)
-print(options_list)
-
+	random.shuffle(options_list)
+	
+	return data

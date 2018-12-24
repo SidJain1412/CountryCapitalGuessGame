@@ -1,0 +1,21 @@
+body{
+    background: -webkit-linear-gradient(left, #E26C7A, #AA72E3);
+}
+.contact-form{
+    background: #F3F3F3;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+    border-radius: 3rem;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+}
