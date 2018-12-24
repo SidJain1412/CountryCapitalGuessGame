@@ -10,7 +10,8 @@ def option_list():
 
 	data = {}
 
-	answer_pos = random.randint(0, len(file))
+	answer_pos = random.randint(1, len(file))
+	print(answer_pos)
 
 	data['country'] = file[answer_pos]['country']
 	data['answer'] = file[answer_pos]['city']
@@ -18,7 +19,8 @@ def option_list():
 	options_list.append(data['answer'])
 
 	for i in range(3):
-		pos = random.randint(0, len(file))
+		print(i)
+		pos = random.randint(1, len(file))
 		options_list.append(file[pos]['city'])
 
 	data['options'] = options_list
