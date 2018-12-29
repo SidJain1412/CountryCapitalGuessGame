@@ -12,22 +12,22 @@
         </div>
         <br>
         <div class="form-group">
-            <h4 id="country-name">{{ data['country'] }}</h4>
+            <h4 id="country-name"></h4>
         </div>
 		<br>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm">			
-					{% for city in data['options'][:2] %}				    
-				        	<button>{{ city }}</button>
+				<div class="col-sm">		    
+				        	<button id="option"></button>
 				        	<br>
-				    {% endfor %}			    
+				        	<button id="option"></button>
+				        	<br>			    
 			    </div>
-			    <div class="col-sm">			   
-				    {% for city in data['options'][2:] %}				    
-				        	<button>{{ city }}</button>
+			    <div class="col-sm">		    
+				        	<button id="option"></button>
 				        	<br>
-				    {% endfor %}			    
+				        	<button id="option"></button>
+				        	<br>			    
 			    </div>
 		    </div>
 	    </div>
