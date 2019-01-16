@@ -12,6 +12,7 @@ getdata();
 //     console.log(but)
 //   });
 // }
+// $(this).html("abcd");
 
 function getdata()
 {
@@ -24,14 +25,14 @@ function getdata()
 			options = result.options;
 			for(var i = 0; i<numOptions; i++)
 			{
-				console.log(options[i]);
+				// console.log(options[i]);
+				console.log(optionButtons[i]);
 				optionButtons[i].innerHTML= options[i];
 			}
 			console.log(result);
 			answer = result.answer;
 			country = result.country;
 			$('#country-name').html(country);
-			// buttonClick();
 			$(".button1").click(function(){
 					console.log("click1");
 					button = document.querySelector(".button1");
@@ -40,30 +41,65 @@ function getdata()
 					if(val == result.answer)
 					{
 						console.log("correct");
-						button.style.background == "green";
+						$(this).css('background', 'green');
 					}
 					else
 					{
 						console.log("wrong");
-						button.style.background == "red";
+						$(this).css('background', 'red');
 					}					
 				});
-			// for(var j = 0; j<numOptions; j++)
-			// {
 
-				// optionButtons[j].addEventListener("click", function(){
-				// 	console.log(j)
-				// 	console.log(optionButtons[j].innerHTML);
-				// 	if(optionButtons[j].innerHTML == result.answer)
-				// 	{
-				// 		optionButtons[j].style.background == "green";
-				// 	}
-				// 	else
-				// 	{
-				// 		optionButtons[j].style.background == "red";
-				// 	}
-				// });
-			// }
+			$(".button2").click(function(){
+					console.log("click1");
+					button = document.querySelector(".button2");
+					val = button.innerHTML;
+					console.log(val);
+					if(val == result.answer)
+					{
+						console.log("correct");
+						$(this).css('background', 'green');
+					}
+					else
+					{
+						console.log("wrong");
+						$(this).css('background', 'red');
+					}					
+				});
+
+			$(".button3").click(function(){
+					console.log("click1");
+					button = document.querySelector(".button3");
+					val = button.innerHTML;
+					console.log(val);
+					if(val == result.answer)
+					{
+						console.log("correct");
+						$(this).css('background', 'green');
+					}
+					else
+					{
+						console.log("wrong");
+						$(this).css('background', 'red');
+					}					
+				});
+
+			$(".button4").click(function(){
+					console.log("click1");
+					button = document.querySelector(".button4");
+					val = button.innerHTML;
+					console.log(val);
+					if(val == result.answer)
+					{
+						console.log("correct");
+						$(this).css('background', 'green');
+					}
+					else
+					{
+						console.log("wrong");
+						$(this).css('background', 'red');
+					}					
+				});
 		}
 	});	
 }
